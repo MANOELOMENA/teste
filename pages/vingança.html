@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemêFlix.com</title>
+    <link rel="icon" href="../img/api-removebg-preview.png" type="icon/png">
+    <link rel="stylesheet" href="../css/braskem.css">
+</head>
+<body>
+    <div class="mestre">
+        <div class="header-buttons">
+            <button onclick="toggleModal('login')">Entrar</button>
+            <button onclick="toggleModal('cadastro')">Cadastrar</button>
+        </div>
+        <div class="logo">
+            <img src="../img/api-removebg-preview.png" alt="Logo" class="girar"/>
+            <div class="container">
+                <a href="../index.html"><p>Memê<span>Flix</span></p></a>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Página Inicial</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./catalogo.html">Catálogo</a></li>
+            </ul>
+        </nav>
+        <br>
+        
+        <div class="filme">
+            <img src="../img/OS Vingança.png" alt="Os Vingança">
+            <div class="filme-info">
+                <a href="./vingança.html"><h3 class="mm">Os Vingança</h3></a>
+                <p class="mm">Avaliação: 9.2</p>
+                <p class="mm">Classificação: 10</p>
+                <p class="mm">Sinopse: 
+                Em "Os Vinganças", a ação épica dos Vingadores encontra uma nova casa nas ruas empoeiradas e vibrantes do bairro Carminha, em Maceió. Quando o tranquilo bairro é ameaçado pela terrível ameaça do vilão Pedronos, um gângster impiedoso determinado a dominar tudo em seu caminho, um grupo improvável de heróis locais se reúne para enfrentar o desafio.</p>
+            </div>
+            <br>
+        </div>
+        <div>
+            <a href="./catalogo.html" id="Voltar">Voltar</a>
+            <br>
+        </div>
+    </div>
+    <div id="modal-login" class="modal">
+        <h2 class="mm">Formulário de Login</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username" class="mm">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password" class="mm">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <button onclick="fecharModal('login')">Fechar</button>
+    </div>
+    
+    <div id="modal-cadastro" class="modal">
+        <h2 class="mm">Formulário de Cadastro</h2>
+        <div class="container" id="container">
+            <form id="userForm" onsubmit="return validaFormulario()">
+                <div class="input-group">
+                    <label for="nome" class="mm">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o Nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="email" class="mm">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu E-mail" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha" class="mm">Senha:</label>
+                    <input type="password" id="senha" placeholder="Digite a senha">
+                    <i id="olhoicon" class="fa fa-eye" onclick="olhoPassword()"></i>
+                </div>
+                <div class="input-group">
+                    <label for="confirmSenha" class="mm">Confirmação de Senha:</label>
+                    <input type="password" id="confirmSenha" name="confirmSenha" minlength="8" placeholder="Confirma Senha" required>
+                    <i id="olhoicon2" class="fa fa-eye" onclick="olhoPassword()"></i>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <button onclick="fecharModal('cadastro')">Fechar</button>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+<footer class="footer">
+    <p>&copy;Todos direitos reservados à Memê<span id="vvv">Flix</span>.com</p>
+</footer>
+</html>
